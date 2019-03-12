@@ -1,0 +1,20 @@
+{
+  "name": "com.example",
+  "version": "1.0.0",
+  "description": "Example ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node start",
+    "test": "npm start"
+  },
+  "author": "chetan",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "webpack-cli": "^3.2.3",
+    "yargs": "^13.2.2"
+  },
+  "devDependencies": {
+    "webpack": "^4.29.6"
+  }
+}
