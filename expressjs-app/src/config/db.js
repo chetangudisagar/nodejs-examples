@@ -1,6 +1,6 @@
 // DB connections here
 const mongoose = require('mongoose');
-const {DB} = require('../../config.js');
+const {DB} = require('./config.js');
 
 module.exports = (mediator) => {
   console.log('-----------connecting to DB-------------');

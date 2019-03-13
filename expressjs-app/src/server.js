@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const EventEmitter = require('events');
+const cors = require('cors');
 
 // require routes & repos here
 const employeeRoutes = require('./api/employee-api');
@@ -22,10 +23,12 @@ require('./config/db')(mediator);
 mediator.once('db.ready', () => {
   // app configurations here
   const app = express();
-  app.use(auth);
+  // app.use(auth);
   app.use(bodyParser.json());
+  app.use(bodyParser.urlencoded({extended: true}));
   app.use(morgan('dev'));
   app.use(helmet());
+  app.use(cors());
 
   // app routes here
   employeeRoutes(app, employeeRepo);

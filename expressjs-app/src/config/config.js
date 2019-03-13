@@ -7,6 +7,6 @@ const DB = {
   PORT: '27017',
   NAME: 'myProject',
 };
+const SECRET = 'abcdefghijklmnopqrstuvwxyz1324567890';
 
-
-module.exports = {DB, SERVER};
+module.exports = {DB, SERVER, SECRET};

@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const {MongoClient} = require('mongodb');
-const {DB} = require('./config.js');
+const {DB} = require('./src/config/config.js');
 const assert = require('assert');
 
 // app creation & setup
@@ -42,8 +42,8 @@ app.get('/', (request, response) => {
 
 
 app.get('/:id?', (request, response) => {
-  response.status(status.OK).json({'test': '2demo', 'data': 'new data',
-  "id": request.params.id});
+  response.status(status.OK).json({'tests': '2demo', 'data': 'new data',
+    'id': request.params.id});
 });
 
 app.post('/', (request, response) => {
